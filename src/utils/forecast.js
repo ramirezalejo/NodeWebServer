@@ -14,7 +14,6 @@ const forecast = (latutide, longitude, callback) => {
         }
         else {
             const currently = body.currently
-            console.log(body.daily.data[0])
             callback(undefined, { message: `${body.daily.data[0].summary} Temperatura actual  ${currently.temperature} grados centigrados, minima ${body.daily.data[0].temperatureMin}, maxima ${body.daily.data[0].temperatureMax}. Hay una probabilidad de lluvia de ${body.daily.data[0].precipProbability * 100} % ` })
         }
 
